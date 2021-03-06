@@ -1,13 +1,20 @@
 library(tidyverse)
+library(usethis)
+library(available)
 
-
-install.packages("usethis")
+?available
+#install.packages("usethis")
 
 use_git_config(user.name = "kaven123456", user.email = "kavenacca@gmail.com")
 
-a <- rnorm(100)
+usethis::use_roxygen_md()
 
-plot(a)
+# usethis::use_github(private = T  )
+usethis::use_readme_md()
+
+B <- rnorm(100)
+
+plot(B)
 # <<<<<<< HEAD
 # 
 # 1:10 %>%
@@ -22,4 +29,13 @@ plot(a)
 
 20:35 %>%
     map_dfc( ~rnorm(10,.))
-    
+
+# install.packages("available")
+
+library(available)
+ # available::available("hr.churn")
+ 
+ # usethis::create_package("../test_r/package_test/hr.churn")
+
+setwd("../hr.churn/")
+
